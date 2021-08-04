@@ -25,8 +25,8 @@ export class FetchDataService {
                         this.message=this.countryList.length>0?"":"Data Not Found";
                       },
                       error => {
-                        console.log(error);
                         this.message="Error Occured";
+                        console.log("In Fetch Data",error);
                       }
                     );
   }
@@ -45,8 +45,10 @@ export class FetchDataService {
                 this.message=this.countryList.length>0?"":"Data Not Found";
               },
               error=>{
+                this.countryList=[];
                 console.log("Error",error);
-                this.message="Error Occured";
+                this.message=error.error.message;
+                ;
               });
   }
   searchCountryByRegion(searchText:string,region:string){
@@ -71,7 +73,7 @@ export class FetchDataService {
   loadSettings():void{
     if(localStorage){
       let x=localStorage.getItem("darkMode")!;
-      let temp=typeof x!=='undefined'? JSON.parse(x):{darkMode:false};
+      let temp=typeof x!=='undefined' && x ? JSON.parse(x):{darkMode:false};
       this.isDarkModeEnable=temp.darkMode;
     }
   }

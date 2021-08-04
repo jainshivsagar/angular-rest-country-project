@@ -17,7 +17,7 @@ export class HomePageComponent implements OnInit,DoCheck {
 
     this.fetchData.fetchData();
     this.countryList=this.fetchData.countryList;
-    this.message=this.message;
+    this.message=this.fetchData.message;
   }
 
   ngOnInit(): void {
@@ -25,7 +25,6 @@ export class HomePageComponent implements OnInit,DoCheck {
 
   ngDoCheck():void{
     this.countryList=this.fetchData.countryList;
-    this.message=this.message;
-
+    this.message=this.fetchData.message;
   }
 }

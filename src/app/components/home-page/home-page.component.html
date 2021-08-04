@@ -1,5 +1,5 @@
 <app-search-bar></app-search-bar>
 <div class="container home">
   <app-card *ngFor="let country of countryList" [country]="country"></app-card>
-  <span class="msg-span" *ngIf="message !== ''">{{ message }}</span>
+  <span class="msg-span" *ngIf="!(message === '')">{{ message }}</span>
 </div>
