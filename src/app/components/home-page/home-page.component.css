@@ -1,0 +1,16 @@
+.home {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.home app-card {
+  width: 20%;
+  margin: 1%;
+  height: fit-content;
+}
+
+.msg-span {
+  font-size: 1.2rem;
+  color: inherit;
+}

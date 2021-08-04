@@ -1,0 +1,8 @@
+<input
+  class="search-input"
+  type="search"
+  placeholder="Search for a country..."
+  [(ngModel)]="searchText"
+  [ngClass]="{ darkMode: isDarkModeEnabled }"
+  (keyup)="onKeyUp()"
+/>

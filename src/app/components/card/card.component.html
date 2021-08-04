@@ -1,0 +1,9 @@
+<a [routerLink]="['/country', country.name]">
+  <div class="card" [ngClass]="{ darkMode: isDarkModeEnabled }">
+    <img [src]="country.flag" />
+    <h5>{{ country.name }}</h5>
+    <div><span>Population:</span>{{ country.population }}</div>
+    <div><span>Region:</span>{{ country.region }}</div>
+    <div><span>Capital:</span>{{ country.capital }}</div>
+  </div>
+</a>

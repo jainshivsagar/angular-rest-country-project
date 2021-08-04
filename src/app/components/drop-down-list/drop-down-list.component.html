@@ -1,0 +1,26 @@
+<mat-form-field
+  class="drop-down-list"
+  [ngClass]="{ darkMode: isDarkModeEnabled }"
+  appearance="outline"
+>
+  <mat-label [ngClass]="{ darkMode: isDarkModeEnabled }"
+    >Filter By Region</mat-label
+  >
+
+  <input
+    type="text"
+    placeholder="Select Region"
+    matInput
+    [formControl]="myControl"
+    [matAutocomplete]="auto"
+    (keyup)="onKeyUp($event)"
+  />
+  <mat-autocomplete
+    #auto="matAutocomplete"
+    (optionSelected)="onOptionSelection($event.option.value)"
+  >
+    <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+      {{ option }}
+    </mat-option>
+  </mat-autocomplete>
+</mat-form-field>

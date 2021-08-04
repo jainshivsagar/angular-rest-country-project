@@ -1,0 +1,75 @@
+<div class="container btn-div">
+  <a
+    class="backBtn"
+    [ngClass]="{ darkMode: isDarkModeEnabled }"
+    href=""
+    (click)="back($event)"
+  >
+    <fa-icon [icon]="faLongArrowLeft"></fa-icon>&nbsp;&nbsp;&nbsp;&nbsp;Back
+  </a>
+</div>
+
+<div class="container detailes-div">
+  <div class="img-section">
+    <img [src]="country.flag" />
+  </div>
+  <div class="info-section">
+    <h2>{{ country.name }}</h2>
+    <div class="info-div">
+      <div class="info-div1">
+        <div class="data-div">
+          <span class="bold-text">Native Name:&nbsp;&nbsp;</span>
+          <span class="data-span">{{ country.nativeName }}</span>
+        </div>
+        <div class="data-div">
+          <span class="bold-text">Population:&nbsp;&nbsp;</span>
+          <span class="data-span">{{ country.population }}</span>
+        </div>
+        <div class="data-div">
+          <span class="bold-text">Region:&nbsp;&nbsp;</span>
+          <span class="data-span">{{ country.region }}</span>
+        </div>
+        <div class="data-div">
+          <span class="bold-text">Sub Region:&nbsp;&nbsp;</span>
+          <span class="data-span">{{ country.subregion }}</span>
+        </div>
+        <div class="data-div">
+          <span class="bold-text">Capital:&nbsp;&nbsp;</span>
+          <span class="data-span">{{ country.capital }}</span>
+        </div>
+      </div>
+      <div class="info-div2">
+        <div class="data-div">
+          <span class="bold-text">Top Level Domain:&nbsp;&nbsp;</span>
+          <span class="data-span" *ngFor="let topD of country.topLevelDomain"
+            >{{ topD }},
+          </span>
+        </div>
+        <div class="data-div">
+          <span class="bold-text">Currencies:&nbsp;&nbsp;</span>
+          <span class="data-span" *ngFor="let currency of country.currencies"
+            >{{ currency.name }},
+          </span>
+        </div>
+        <div class="data-div">
+          <span class="bold-text">Languages:&nbsp;&nbsp;</span>
+          <span class="data-span" *ngFor="let lang of country.languages"
+            >{{ lang.name }},
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="border-countries-div">
+      <p class="bold-text">Border Countries:</p>
+      <ng-container *ngFor="let bCountry of country.borders">
+        <a
+          class="borderBtn"
+          [ngClass]="{ darkMode: isDarkModeEnabled }"
+          [routerLink]="['/country', bCountry]"
+          (click)="navigateToUrl(bCountry)"
+          >{{ bCountry }}</a
+        >
+      </ng-container>
+    </div>
+  </div>
+</div>

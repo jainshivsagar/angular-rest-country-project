@@ -1,0 +1,7 @@
+<div class="container">
+  <app-search-field (keyUp)="onKeyUp($event)"></app-search-field>
+  <app-drop-down-list
+    (optionSelection)="onOptionSelection($event)"
+    (keyUp)="onNoOptionSelected($event)"
+  ></app-drop-down-list>
+</div>

@@ -1,0 +1,11 @@
+div {
+  margin-top: 2%;
+  height: 10%;
+}
+app-search-field {
+  float: left;
+  width: 40%;
+}
+app-drop-down-list {
+  float: right;
+}

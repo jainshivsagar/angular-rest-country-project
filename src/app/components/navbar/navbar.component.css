@@ -1,0 +1,21 @@
+h2 {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: inherit;
+  margin: 2% 2% 2% 0%;
+  display: inline;
+  float: left;
+}
+
+.toggleTheme {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: inherit;
+  float: right;
+  margin: 2% 0% 2% 2%;
+  border: 0;
+  background: inherit;
+}
+.darkModeToggle {
+  color: gold;
+}
