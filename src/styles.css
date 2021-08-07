@@ -463,15 +463,3 @@ body {
   background: hsl(207, 26%, 17%);
   color: hsl(0, 0%, 100%);
 }
-
-/* ## Dark Mode
-- Background Color:- hsl(207, 26%, 17%)
-- Element Background Color:- hsl(209, 23%, 22%)
-- Text Color:- hsl(0, 0%, 100%)
-- Input Color:- hsl(0, 0%, 100%)
-
-## Light Mode
-- Background Color:- hsl(0, 0%, 98%)
-- Element Background Color:- hsl(0, 0%, 100%)
-- Text Color:- hsl(200, 15%, 8%)
-- Input Color:- hsl(0, 0%, 52%) */
