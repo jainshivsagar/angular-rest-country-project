@@ -16,6 +16,11 @@
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
+.text-div {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0;
+}
 h5 {
   font-size: 1.2rem;
   font-weight: 500;

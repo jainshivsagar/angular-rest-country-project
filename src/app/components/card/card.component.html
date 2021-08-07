@@ -2,8 +2,10 @@
   <div class="card" [ngClass]="{ darkMode: isDarkModeEnabled }">
     <img [src]="country.flag" />
     <h5>{{ country.name }}</h5>
-    <div><span>Population:</span>{{ country.population }}</div>
-    <div><span>Region:</span>{{ country.region }}</div>
-    <div><span>Capital:</span>{{ country.capital }}</div>
+    <div class="text-div">
+      <div><span>Population:</span>&nbsp;&nbsp;{{ country.population }}</div>
+      <div><span>Region:</span>&nbsp;&nbsp;{{ country.region }}</div>
+      <div><span>Capital:</span>&nbsp;&nbsp;{{ country.capital }}</div>
+    </div>
   </div>
 </a>
